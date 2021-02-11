@@ -8,6 +8,8 @@ export const AccessForm = () => {
     return (
     <>
         <h1>Access to secret list</h1>
+
+        <div>This is the <span>Access to secret list</span>!</div>
         <form>
             <div>
             <label htmlFor='username'>very secret username</label>
@@ -18,11 +20,11 @@ export const AccessForm = () => {
             <label htmlFor='password'>very secret password</label>
             <input type='password' name='password' id='password' />
             </div>
-
-            <button onClick={() => setShowSecretMessage(true)}>Submit</button>
         </form>
-        {showSecretMessage && <Link to="/about">About</Link>
-}
+
+        <button onClick={() => setShowSecretMessage(true)}>Submit</button>
+
+        {showSecretMessage && (<div><Link to="/suspects">Secret Members Page</Link></div>)}
     </>
 )
 };
