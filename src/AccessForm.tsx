@@ -9,7 +9,7 @@ export const AccessForm = () => {
     <>
         <h1>Access to secret list</h1>
 
-        <div>This is the <span>Access to secret list</span>!</div>
+        <div>This is the <span>Access to secret list</span> page!</div>
         <form>
             <div>
             <label htmlFor='username'>very secret username</label>
