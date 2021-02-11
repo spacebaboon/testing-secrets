@@ -44,3 +44,62 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Hidden message
+
+### steps to find the imposter
+
+1. start at the start of the application. make sure we're in the right place. 
+- how can we check the page heading when the same text appears in other places? getByRole()
+- 
+
+2. how can we find our way deeper in? find the links on the page. findAllByRole()
+
+
+- when there are many groups? findByText, then use within() and findAllByRole()
+
+3. 
+
+
+Site structure:
+
+home page with title, body text with headings and list of links. link to 'about us'
+
+about us page has lists of links, with headings
+
+need to find links list with given heading
+
+members list: table with names and secret agent role
+- need to find table row with secret agent, and find name
+
+
+
+
+### things to talk about
+
+testing library suite
+xxx-testing-library
+dom-testing-library
+jest-dom
+user-event
+https://github.com/testing-library/jest-dom
+
+also chai-dom
+https://github.com/nathanboktae/chai-dom
+
+
+getByRole, with name
+https://www.w3.org/TR/accname-1.1/#dfn-accessible-name
+accessible name is visible text, e.g. button or heading text
+
+within
+
+getByText
+
+await findBy...
+
+typing input and clicking buttons
+
+jest-dom
+https://github.com/testing-library/jest-dom
