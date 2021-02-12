@@ -1,35 +1,35 @@
-export const UserTable = () => { 
-    
+export const UserTable = () => {
+
     const users = [
-        {id: 1, name: 'Samuli', onAssassinationMission: false },
-        {id: 2, name: 'Kimmo', onAssassinationMission: false },
-        {id: 3, name: 'Tiina', onAssassinationMission: false },
-        {id: 4, name: 'Roope', onAssassinationMission: false },
-        {id: 5, name: 'Ville', onAssassinationMission: true },
-        {id: 6, name: 'Ben', onAssassinationMission: false },
-        {id: 7, name: 'Jan', onAssassinationMission: false },
-        {id: 8, name: 'AP', onAssassinationMission: false },
-        {id: 9, name: 'Ivan', onAssassinationMission: false },
+        { id: 1, name: 'Samuli', isAssassinRobot: false },
+        { id: 2, name: 'Kimmo', isAssassinRobot: false },
+        { id: 3, name: 'Tiina', isAssassinRobot: false },
+        { id: 4, name: 'Roope', isAssassinRobot: false },
+        { id: 5, name: 'Ville', isAssassinRobot: true },
+        { id: 6, name: 'Ben', isAssassinRobot: false },
+        { id: 7, name: 'Jan', isAssassinRobot: false },
+        { id: 8, name: 'AP', isAssassinRobot: false },
+        { id: 9, name: 'Ivan', isAssassinRobot: false },
     ]
     return (
-    <>
-        <h1>Users</h1>
-        <table>
-            <thead>
-                <tr>
-                    <td>Name</td>
-                    <td>On active mission?</td>
-                </tr>
-            </thead>
-            <tbody>
-                {users.map(user => 
-                <tr>
-                    <td>{user.name}</td>    
-                    <td>{user.onAssassinationMission ? 'totally' : 'no'}</td>    
-                </tr>
-                )}
-            </tbody>
-        </table>
-    </>
-)
+        <>
+            <h1>SpAcE InVaDeRs MeMbErS</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Replaced by evil robot?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.map(user =>
+                        <tr key={user.id}>
+                            <td>{user.name}</td>
+                            <td>{user.isAssassinRobot ? 'totally' : 'no'}</td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
+        </>
+    )
 };

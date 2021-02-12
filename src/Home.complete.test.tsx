@@ -8,10 +8,10 @@ describe('Home page', () => {
   })
 
   test('we are on the right trail', () => {
-    expect(true).toBe(true);
+    screen.getByText('Evil Time Traveller Robot Portal');
   });
 
   test('we can navigate to the next page', () => {
-    expect(true).toBe(true);
+    expect(screen.getByRole('link')?.closest('a')).toHaveAttribute('href', '/login')
   })
 })
